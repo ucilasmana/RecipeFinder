@@ -1,7 +1,8 @@
 'use client'
 import CategoriesList from "./components/categoriesList";
 import Hero from "./components/hero";
-import Recipes from "./components/recipes";
+import Recipes from "./components/recipeCollection";
+
 
 export default function Home() {
   return (

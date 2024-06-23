@@ -8,7 +8,7 @@ export const metadata = {
 }
 
 export default function RootLayout({ children, modal
- }) {
+ }) { 
   return (
     <html lang="en">
     <body className={`${paytoneFont} ${catamaranFont} ${jostFont}`}>

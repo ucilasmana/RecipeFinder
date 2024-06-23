@@ -4,15 +4,14 @@ import { CloseIcon } from '../../../public/icons/svg';
 import { useRouter } from 'next/navigation'
 
 const Modal = ({children}) => {
-    const [modal, setModal] = useState(true)
     const router=useRouter()
     const handleClose = () => {
-      setModal(false)
+      document.body.style.overflow='auto'
       router.back()
     }
   useEffect(() => {
-        document.body.style.overflow = modal? 'hidden' : 'auto';
-  }, [modal]); 
+    document.body.style.overflow ='hidden'
+  },[]); 
      
 
   return (

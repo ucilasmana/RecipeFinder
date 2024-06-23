@@ -1,5 +1,5 @@
 'use client'
-import List from '@/app/components/list'
+import List from '@/app/components/recipeList'
 import { ListSkeleton } from '@/app/components/skeleton'
 import { fetcher } from '@/app/lib/fetcher'
 import useSWR from 'swr'

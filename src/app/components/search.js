@@ -1,7 +1,6 @@
 'use client'
-import { useEffect, useRef, useState } from "react"
-import List from "./list"
-import { ListSkeleton } from "./skeleton"
+import {useState } from "react"
+import List from "./recipeList"
 import useSWR from "swr"
 import { fetcher } from "../lib/fetcher"
 import { SearchIcon } from "../../../public/icons/svg"
@@ -9,9 +8,7 @@ import { SearchIcon } from "../../../public/icons/svg"
 const Search = () => {
   const [recipe, setRecipe] =useState('')
 
-  const { data, isLoading} = useSWR(`search.php?s=${recipe}`, fetcher)
-
-    console.log(data)
+  const { data} = useSWR(`search.php?s=${recipe}`, fetcher)
 
   return (
     <div className="pt-4 w-full px-6 sm:px-8 md:px-10 lg:px-16">

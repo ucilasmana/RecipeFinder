@@ -49,7 +49,7 @@ const List= ({recipeList, totalRecipes}) => {
                 src={recipe.strMealThumb} 
                 alt={recipe.strMeal}
                 fill={true}
-                sizes="30vw"
+                sizes="25vw"
                 style={{
                 objectFit: 'cover',
                 padding:'7px',}}

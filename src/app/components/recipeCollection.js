@@ -1,7 +1,7 @@
 import useSWR from 'swr'
 import {fetchWithAreas} from "../lib/fetcher";
 import { HeadingSkeleton, ListSkeleton } from '../components/skeleton';
-import List from './list';
+import List from './recipeList';
 import { useEffect, useState, useRef } from 'react';
 
 const Recipes= () => {

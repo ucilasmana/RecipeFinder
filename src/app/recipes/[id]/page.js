@@ -8,9 +8,18 @@ import { useEffect, useState } from 'react'
 import useSWR from 'swr'
 
 const Details = ({params}) => {
+   
   const {id} = params
   const {data, isLoading} = useSWR(`lookup.php?i=${id}`, fetcher)
   const [ingredients, setIngredients] = useState([])
+
+  useEffect(() => {
+
+    if(document.body.style.overflow==='hidden') 
+      {
+        document.body.style.overflow='auto'
+      }
+  }, []); 
 
   useEffect(()=>{
     if(!isLoading)
@@ -46,7 +55,7 @@ const [details]=data.meals
   <>
   <BackButton/>
   <div className='w-full h-full px-6 md:px-8 flex justify-center items-center '>
-    <div className=' w-[95%] lg:w-full flex flex-col gap-8'>
+    <div className=' w-[95%] lg:w-full flex flex-col gap-8 justify-center items-center'>
       <h4 className=' font-jost lg:w-fit text-center px-3 py-2 bg-white text-lg sm:text-xl md:text-2xl lg:text-3xl shadow rounded-xl capitalize text-red-700 font-bold'>{details.strMeal}</h4>
       <div className='flex flex-col lg:flex-row justify-evenly items-center lg:items-start gap-8'>
         <div className="relative h-86 w-full md:h-100 lg:w-120 lg:h-120 border border-gray-50 bg-white rounded-lg shadow">
