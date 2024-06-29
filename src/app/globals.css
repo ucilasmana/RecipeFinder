@@ -2,6 +2,7 @@
 @tailwind components;
 @tailwind utilities;
 
+/*We use @apply to override the default styles of elements*/
 
 html{
   @apply scroll-smooth h-full w-full;

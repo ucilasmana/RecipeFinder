@@ -19,19 +19,6 @@ export const SearchIcon = (props) => (
 
 )
 
-export const RecipesIcon = (props) => (
-  <svg
-    xmlns="http://www.w3.org/2000/svg"
-    xmlSpace="preserve"
-    width={800}
-    height={800}
-    viewBox="0 0 32 32"
-    {...props}
-  >
-    <path d="M3 22h26c.6 0 1-.4 1-1s-.4-1-1-1h-1c-.2-5.7-4.1-10.4-9.3-11.7.2-.4.3-.8.3-1.3 0-1.7-1.3-3-3-3s-3 1.3-3 3c0 .5.1.9.3 1.3C8.1 9.6 4.2 14.3 4 20H3c-.6 0-1 .4-1 1s.4 1 1 1zM5.5 24l.8 1.5c.1.3.5.5.9.5h17.7c.4 0 .7-.2.9-.5l.8-1.5H5.5z" />
-  </svg>
-)
-
 export const CloseIcon = (props) => (
   <svg
     xmlns="http://www.w3.org/2000/svg"

@@ -9,8 +9,8 @@ export default function Error({ error, reset }) {
  
   return (
      
-    <div className='absolute w-full h-full p-6 bg-gray-100 z-50'>
-        
+    <div className='absolute w-full h-[91%] top-16 z-50 bg-gray-100'>
+    
       <div className='absolute top-1/2 left-1/2 -translate-y-1/2 -translate-x-1/2'>
         <div className='flex flex-col gap-12 w-full h-full text-center justify-center items-center'>
         <h2 className='text-6xl sm:text-7xl md:text-8xl text-zinc-500 font-jost font-semibold'>Something went wrong!</h2>
@@ -19,7 +19,8 @@ export default function Error({ error, reset }) {
                 () => reset()}>Try again
             </button>
         </div>
+        </div>
       </div>
-    </div>
+   
   )
 }

@@ -1,4 +1,4 @@
-import { Beef, Chicken, Dessert, Lamb, Miscellaneous, Pasta, Pork, Seafood, Side, Starter, Vegan, Vegetarian, Breakfast, Goat } from '../../../public/icons/svg';
+import {  Beef, Chicken, Dessert, Lamb, Miscellaneous, Pasta, Pork, Seafood, Side, Starter, Vegan, Vegetarian, Breakfast, Goat } from '../../../public/icons/svg';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import 'swiper/css';
 import useSWR from 'swr'
