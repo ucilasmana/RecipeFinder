@@ -2,22 +2,22 @@ import useSWR from 'swr'
 import {fetchWithAreas} from "../lib/fetcher";
 import { HeadingSkeleton, ListSkeleton } from '../components/skeleton';
 import List from './recipeList';
-import { useEffect, useState, useRef } from 'react';
+import { useEffect, useState,} from 'react';
 
 const Recipes= () => {
 
-  const { data: recipes, isLoading:recipesLoading } = useSWR('filter.php?a', fetchWithAreas)
+  const { data, isLoading } = useSWR('filter.php?a', fetchWithAreas)
 
   const [recipeList, setRecipeList]=useState([])
 
   useEffect(()=>{
-    if(!recipesLoading)
+    if(!isLoading)
     {
-      setRecipeList(recipes)
+      setRecipeList(data)
     }
-  },[recipesLoading])
+  },[isLoading])
 
-  if(recipesLoading)
+  if(isLoading)
     {
       return (
         <>

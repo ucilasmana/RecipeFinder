@@ -1,4 +1,4 @@
-import {  Beef, Chicken, Dessert, Lamb, Miscellaneous, Pasta, Pork, Seafood, Side, Starter, Vegan, Vegetarian, Breakfast, Goat } from '../../../public/icons/svg';
+import { Beef, Chicken, Dessert, Lamb, Miscellaneous, Pasta, Pork, Seafood, Side, Starter, Vegan, Vegetarian, Breakfast, Goat } from '../../../public/icons/svg';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import 'swiper/css';
 import useSWR from 'swr'
@@ -69,7 +69,7 @@ const CategoriesList = () => {
     <SwiperSlide className="first:ml-6 first:sm:ml-8 mb-4 w-full  cursor-pointer font-medium" key={category.idCategory}>
       <Link href={`/categories/${category.strCategory}`} className='flex flex-col justify-center items-center gap-2 bg-white  py-2  rounded-lg  shadow-md'>
         <Icon className="h-6 w-6 xs-1:h-8 md:h-10 lg:h-12 xs-1:w-8 md:w-10 lg:w-12"/> 
-        <span className='text-xxs sm:text-xs md:text-sm text-zinc-700'>{isLoading ? "loading" : category.strCategory} </span>    
+        <span className='text-xxs sm:text-xs md:text-sm text-zinc-700'>{category.strCategory} </span>    
       </Link>
     </SwiperSlide>
   );

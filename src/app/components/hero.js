@@ -6,9 +6,8 @@ const Hero= () => {
   const [showSkeleton, setShowSkeleton] = useState(true);
 
   useEffect(() => {
-    // Simulate fetching data or any other async operation
     setTimeout(() => {
-      setShowSkeleton(false); // Hide the skeleton after 2 seconds
+      setShowSkeleton(false); 
     }, 75);
   }, []);
   

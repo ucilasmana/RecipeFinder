@@ -5,7 +5,7 @@ import Image from "next/image";
 import React, { useState, useEffect, useRef } from 'react';
 import { useInView } from "react-intersection-observer";
 
-const pageSize=24
+const itemsPerLoad=24
 
 const List= ({recipeList, totalRecipes}) => {
 
@@ -16,7 +16,7 @@ const List= ({recipeList, totalRecipes}) => {
 
   useEffect(() => {
     if(inView){
-      if(totalRecipes<pageSize)   {
+      if(totalRecipes<itemsPerLoad)   {
         setRecipes(recipeList)
         setHasMoreRecipes(false)
       }
@@ -26,7 +26,7 @@ const List= ({recipeList, totalRecipes}) => {
         }
         timeoutId.current = setTimeout(() => {
             const startIndex = recipes.length;
-            const nextRecipes = recipeList.slice(startIndex, startIndex + pageSize);
+            const nextRecipes = recipeList.slice(startIndex, startIndex + itemsPerLoad);
             setRecipes((prevRecipes) => [...prevRecipes, ...nextRecipes]);        
           }, 1000);
 

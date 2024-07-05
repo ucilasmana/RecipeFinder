@@ -1,8 +1,7 @@
 'use client'
 import BackButton from '@/app/components/backButton'
-import { DetailSkeleton, ListSkeleton } from '@/app/components/skeleton'
+import { DetailSkeleton } from '@/app/components/skeleton'
 import { fetcher } from '@/app/lib/fetcher'
-import Loading from '../../../../public/loading.gif'
 import Image from "next/image";
 import { useEffect, useState } from 'react'
 import useSWR from 'swr'
