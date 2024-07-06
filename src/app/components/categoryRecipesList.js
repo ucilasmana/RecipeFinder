@@ -1,4 +1,3 @@
-'use server'
 import List from '@/app/components/recipeList'
 import { fetcher } from '@/app/lib/fetcher'
 
